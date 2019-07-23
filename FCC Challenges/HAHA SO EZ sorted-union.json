@@ -1,0 +1,1 @@
+{"index.js":"function uniteUnique(arr) {\nlet haha = [];\nlet newA = [];\nlet numA = Object.keys(arguments).length; \n\nfor (let i = 0; i< numA; i++) {\n  newA.push(arguments[i]);\n  haha = Array.prototype.concat(...newA);\n}\nlet uniq = [...new Set(haha)];\nreturn uniq;\n}\n\nuniteUnique([1, 3, 2], [1, [5]], [2, [4]]);\n"}

@@ -1,0 +1,1 @@
+{"index.js":"function fearNotLetter(str) {\nlet abc = 'abcdefghijklmnopqrstuvwxyz';\nlet sliceOfAbc = abc.slice(abc.indexOf(str[0]), abc.indexOf(str.slice(-1)) + 1).split('');\n\nif (str == abc) {return undefined}\nlet result = sliceOfAbc.filter(\n  x => !str.split('').includes(x)\n).join();\n\n\n\n  return result;\n}\n\nfearNotLetter(\"abce\");"}

@@ -1,0 +1,1 @@
+{"index.js":"function bouncer(arr) {\n\nlet filtered = arr.filter(Boolean);\n\nreturn filtered;\n\n}\n\nbouncer([7, \"ate\", \"\", false, 9]);\n\n//should return [7, \"ate\", 9]\n//false, null, 0, \"\", undefined, and NaN\n//converting each value to a Boolean"}

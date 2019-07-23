@@ -1,0 +1,1 @@
+{"index.js":"function truthCheck(collection, pre) {\n  // Is everyone being true?\n  return collection.every(obj => obj[pre]);\n}"}

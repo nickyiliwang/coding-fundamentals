@@ -1,0 +1,1 @@
+{"index.js":"function getIndexToIns(arr, num) {\narr.splice(1, 0, num);\narr.sort((a, b) => a - b);\nreturn arr.indexOf(num);\n}\n\ngetIndexToIns([10, 20, 30, 40, 50], 35);"}

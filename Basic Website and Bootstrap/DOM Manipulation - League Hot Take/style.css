@@ -1,0 +1,33 @@
+#reasons {
+    text-align: center;
+}
+
+h4 {
+    text-align: center
+}
+
+p {
+    text-align: center;
+}
+
+#voteheader,
+#votesub {
+    text-align: left;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 21vw;
+    object-fit: cover;
+}
+
+.col-4 {
+    align-content: left;
+    margin: auto;
+    padding: auto;
+
+}
+.red{
+    background: red;
+}
+

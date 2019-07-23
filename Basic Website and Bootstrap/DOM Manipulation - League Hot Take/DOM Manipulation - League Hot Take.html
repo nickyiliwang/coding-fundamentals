@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">HotTake</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://vignette.wikia.nocookie.net/characterprofile/images/a/a1/LinkZelda.png/revision/latest?cb=20160105030137" target="_blank">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">FAQ</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="https://www.youtube.com/watch?v=ZKnDjFYfoJI" target="_blank">How
+                            Do I Uninstall League Of Legends?</a>
+                        <a class="dropdown-item"
+                            href="https://www.metacritic.com/browse/games/score/metascore/all/pc/filtered"
+                            target="_blank">What games should I actually play?</a>
+                    </div>
+                </li>
+            </ul>
+
+            <form class="search navbar-form navbar-right" action="http://www.google.com/search" method="get"
+                role="search" onSubmit="Gsitesearch(this)">
+                <div class="input-group"> 
+                    <input name="q" type="hidden" />
+                    <input class="form-control mr-sm-2" name="qfront" type="search" required class="searchField" placeholder="Google Site Search" maxlength="50" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="search-button btn btn-success">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Meaning Of life?</button>
+                    </span>
+                </div>
+            </form>
+
+        </div>
+    </nav>
+    <br>
+    <div class="container" id="headertoggle">
+        <div class="row">
+            <img src="http://pluspng.com/img-png/league-of-legends-hd-png-file-lol-new-logo-png-900.png" class="col-4">
+            </h1>
+            <h1 class="col-4" id="lies">Is the best Game Ever!</h1>
+            <button class="btn btn-primary col-4" id="truth">Click Me For Truth</button>
+            <br>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid" id="votingsection">
+        <h1 id="voteheader">Hey, you there , Yes you, What do you think?</h1>
+        <h3 id="votesub">Let me have your vote:</h3>
+        <br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="https://media.swncdn.com/Christianity/HistoryTimeline/10430.jpg" alt="">
+                <button id="vote1">
+                    <div class="card-body">
+                        <h4 class="card-title">I Agree!</h4>
+                        <p class="card-text">You are an Absolute Saint!</p>
+                    </div>
+                </button>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://f4.bcbits.com/img/a1426169303_10.jpg" alt="">
+                <button id="vote2">
+                    <div class="card-body">
+                        <h4 class="card-title">I'm Dead Inside!</h4>
+                        <p class="card-text">We are soulmates!</p>
+                    </div>
+                </button>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://www.thewrap.com/wp-content/uploads/2017/01/don.jpg" alt="">
+                <button id="vote3">
+                    <div class="card-body">
+                        <h4 class="card-title">Wrong!</h4>
+                        <p class="card-text">Fake News</p>
+                    </div>
+                </button>
+            </div>
+            <div class="card" id="vote4">
+
+                <img class="card-img-top"
+                    src="https://res.cloudinary.com/lmn/image/upload/c_limit,h_360,w_640/e_sharpen:100/f_auto,fl_lossy,q_auto/v1/gameskinny/33b5cb0d4f71938a7c710ad007187ad9.png"
+                    alt="">
+                <button>
+                    <div class="card-body">
+                        <h4 class="card-title">I'm Die Hard S1 Veteran</h4>
+                        <p class="card-text">League #1 4Evar</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container" id="votecounter">
+        <div class="card-deck">
+            <div class="card col-3">
+                <div class="card-body">
+                    <h4 class="card-title">I Agree!</h4>
+                    <p class="card-text" id="result1">0</p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <h4 class="card-title">I'm Dead Inside!</h4>
+                    <p class="card-text" id="result2">0</p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <h4 class="card-title">Wrong!</h4>
+                    <p class="card-text" id="result3">0</p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <h4 class="card-title">I'm Die Hard S1 Veteran</h4>
+                    <p class="card-text" id="result4">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

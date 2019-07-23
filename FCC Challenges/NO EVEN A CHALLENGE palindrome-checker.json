@@ -1,0 +1,1 @@
+{"index.js":"function palindrome(str) {\nlet n = str.toLowerCase();\nlet regex = /\\w/gi;\nlet clean = n.match(regex).filter(x => x !== \"_\" );\nlet og = clean.join('');\nlet rev = clean.reverse().join('');\n\nreturn og === rev ? true: false;\n}\n\npalindrome(\"0_0 (: /-\\ :) 0-0\")"}
